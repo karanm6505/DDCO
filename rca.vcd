@@ -1,0 +1,351 @@
+$date
+	Tue Aug 20 14:27:26 2024
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1s
+$end
+$scope module ripplecarryadder_tb $end
+$var wire 1 ! c3 $end
+$var wire 1 " s3 $end
+$var wire 1 # s2 $end
+$var wire 1 $ s1 $end
+$var wire 1 % s0 $end
+$var reg 1 & a0 $end
+$var reg 1 ' a1 $end
+$var reg 1 ( a2 $end
+$var reg 1 ) a3 $end
+$var reg 1 * b0 $end
+$var reg 1 + b1 $end
+$var reg 1 , b2 $end
+$var reg 1 - b3 $end
+$var reg 1 . cin $end
+$scope module rca $end
+$var wire 1 & a0 $end
+$var wire 1 ' a1 $end
+$var wire 1 ( a2 $end
+$var wire 1 ) a3 $end
+$var wire 1 * b0 $end
+$var wire 1 + b1 $end
+$var wire 1 , b2 $end
+$var wire 1 - b3 $end
+$var wire 1 / c0 $end
+$var wire 1 0 c1 $end
+$var wire 1 1 c2 $end
+$var wire 1 ! c3 $end
+$var wire 1 . cin $end
+$var wire 1 " s3 $end
+$var wire 1 # s2 $end
+$var wire 1 $ s1 $end
+$var wire 1 % s0 $end
+$scope module fa1 $end
+$var wire 1 & a $end
+$var wire 1 * b $end
+$var wire 1 . c $end
+$var wire 1 / c_out $end
+$var wire 1 2 t5 $end
+$var wire 1 3 t4 $end
+$var wire 1 4 t3 $end
+$var wire 1 5 t2 $end
+$var wire 1 6 t1 $end
+$var wire 1 % s $end
+$var wire 1 7 cout $end
+$scope module a1 $end
+$var wire 1 & a $end
+$var wire 1 * b $end
+$var wire 1 5 o $end
+$upscope $end
+$scope module a2 $end
+$var wire 1 & a $end
+$var wire 1 . b $end
+$var wire 1 4 o $end
+$upscope $end
+$scope module a3 $end
+$var wire 1 * a $end
+$var wire 1 . b $end
+$var wire 1 3 o $end
+$upscope $end
+$scope module o1 $end
+$var wire 1 5 a $end
+$var wire 1 4 b $end
+$var wire 1 2 o $end
+$upscope $end
+$scope module o2 $end
+$var wire 1 2 a $end
+$var wire 1 3 b $end
+$var wire 1 7 o $end
+$upscope $end
+$scope module x1 $end
+$var wire 1 & a $end
+$var wire 1 * b $end
+$var wire 1 6 o $end
+$upscope $end
+$scope module x2 $end
+$var wire 1 . a $end
+$var wire 1 6 b $end
+$var wire 1 % o $end
+$upscope $end
+$upscope $end
+$scope module fa2 $end
+$var wire 1 ' a $end
+$var wire 1 + b $end
+$var wire 1 / c $end
+$var wire 1 0 c_out $end
+$var wire 1 8 t5 $end
+$var wire 1 9 t4 $end
+$var wire 1 : t3 $end
+$var wire 1 ; t2 $end
+$var wire 1 < t1 $end
+$var wire 1 $ s $end
+$var wire 1 = cout $end
+$scope module a1 $end
+$var wire 1 ' a $end
+$var wire 1 + b $end
+$var wire 1 ; o $end
+$upscope $end
+$scope module a2 $end
+$var wire 1 ' a $end
+$var wire 1 / b $end
+$var wire 1 : o $end
+$upscope $end
+$scope module a3 $end
+$var wire 1 + a $end
+$var wire 1 / b $end
+$var wire 1 9 o $end
+$upscope $end
+$scope module o1 $end
+$var wire 1 ; a $end
+$var wire 1 : b $end
+$var wire 1 8 o $end
+$upscope $end
+$scope module o2 $end
+$var wire 1 8 a $end
+$var wire 1 9 b $end
+$var wire 1 = o $end
+$upscope $end
+$scope module x1 $end
+$var wire 1 ' a $end
+$var wire 1 + b $end
+$var wire 1 < o $end
+$upscope $end
+$scope module x2 $end
+$var wire 1 / a $end
+$var wire 1 < b $end
+$var wire 1 $ o $end
+$upscope $end
+$upscope $end
+$scope module fa3 $end
+$var wire 1 ( a $end
+$var wire 1 , b $end
+$var wire 1 0 c $end
+$var wire 1 1 c_out $end
+$var wire 1 > t5 $end
+$var wire 1 ? t4 $end
+$var wire 1 @ t3 $end
+$var wire 1 A t2 $end
+$var wire 1 B t1 $end
+$var wire 1 # s $end
+$var wire 1 C cout $end
+$scope module a1 $end
+$var wire 1 ( a $end
+$var wire 1 , b $end
+$var wire 1 A o $end
+$upscope $end
+$scope module a2 $end
+$var wire 1 ( a $end
+$var wire 1 0 b $end
+$var wire 1 @ o $end
+$upscope $end
+$scope module a3 $end
+$var wire 1 , a $end
+$var wire 1 0 b $end
+$var wire 1 ? o $end
+$upscope $end
+$scope module o1 $end
+$var wire 1 A a $end
+$var wire 1 @ b $end
+$var wire 1 > o $end
+$upscope $end
+$scope module o2 $end
+$var wire 1 > a $end
+$var wire 1 ? b $end
+$var wire 1 C o $end
+$upscope $end
+$scope module x1 $end
+$var wire 1 ( a $end
+$var wire 1 , b $end
+$var wire 1 B o $end
+$upscope $end
+$scope module x2 $end
+$var wire 1 0 a $end
+$var wire 1 B b $end
+$var wire 1 # o $end
+$upscope $end
+$upscope $end
+$scope module fa4 $end
+$var wire 1 ) a $end
+$var wire 1 - b $end
+$var wire 1 1 c $end
+$var wire 1 ! c_out $end
+$var wire 1 D t5 $end
+$var wire 1 E t4 $end
+$var wire 1 F t3 $end
+$var wire 1 G t2 $end
+$var wire 1 H t1 $end
+$var wire 1 " s $end
+$var wire 1 I cout $end
+$scope module a1 $end
+$var wire 1 ) a $end
+$var wire 1 - b $end
+$var wire 1 G o $end
+$upscope $end
+$scope module a2 $end
+$var wire 1 ) a $end
+$var wire 1 1 b $end
+$var wire 1 F o $end
+$upscope $end
+$scope module a3 $end
+$var wire 1 - a $end
+$var wire 1 1 b $end
+$var wire 1 E o $end
+$upscope $end
+$scope module o1 $end
+$var wire 1 G a $end
+$var wire 1 F b $end
+$var wire 1 D o $end
+$upscope $end
+$scope module o2 $end
+$var wire 1 D a $end
+$var wire 1 E b $end
+$var wire 1 I o $end
+$upscope $end
+$scope module x1 $end
+$var wire 1 ) a $end
+$var wire 1 - b $end
+$var wire 1 H o $end
+$upscope $end
+$scope module x2 $end
+$var wire 1 1 a $end
+$var wire 1 H b $end
+$var wire 1 " o $end
+$upscope $end
+$upscope $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+$end
+#0
+$dumpvars
+0I
+0H
+0G
+0F
+0E
+0D
+0C
+0B
+0A
+0@
+0?
+0>
+0=
+0<
+0;
+0:
+09
+08
+07
+06
+05
+04
+03
+02
+z1
+z0
+z/
+0.
+0-
+0,
+0+
+0*
+0)
+0(
+0'
+0&
+0%
+x$
+x#
+x"
+z!
+$end
+#10
+xC
+xI
+x=
+x>
+1%
+xE
+1H
+x9
+1<
+x@
+1B
+16
+1-
+1+
+1(
+1&
+#20
+1C
+17
+1I
+1=
+1>
+12
+0%
+1D
+18
+1A
+x?
+0B
+15
+06
+1G
+xF
+0H
+1;
+x:
+0<
+1,
+1*
+1)
+1'
+#30
+x=
+xC
+0I
+x8
+0D
+0>
+14
+13
+1%
+0E
+0;
+09
+1<
+0G
+0F
+0A
+0@
+1B
+1.
+0-
+0+
+0)
+0(
+#40
