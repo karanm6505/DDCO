@@ -43,4 +43,3 @@ module alureg (
     assign d_out_b = alu_in_b;
 
 endmodule
-
