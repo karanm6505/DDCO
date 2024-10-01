@@ -14,7 +14,7 @@ endmodule
 
 module circuitclight(input wire A, B, C, output wire o);
     wire t1;
-    xor3 x3(A, B, C, t1);  // Changed 'xor' to 'xor3'
+    xor3 x3(A, B, C, t1);  
     invert no(t1, o);
 endmodule
 
@@ -31,8 +31,7 @@ module clight_tb;
         for (i = 0; i < 8; i = i + 1) begin
             {A, B, C} = i;
             #10;
-            $display("A=%b, B=%b, C=%b, o=%b", A, B, C, o);  // Added display statement
         end
-        $finish;  // Added $finish to end simulation
+        $finish; 
     end
 endmodule
