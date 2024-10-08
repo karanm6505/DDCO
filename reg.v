@@ -1,66 +1,3 @@
-module xor_2(input wire a, b, output wire o);
-    assign o = a ^ b;
-endmodule
-
-module mux21(input wire a, b, s, output wire o);
-    assign o = s ? b : a;
-endmodule
-
-module and_2(input wire a, b, output wire o);
-    assign o = a & b;
-endmodule
-
-module or_2(input wire a, b, output wire o);
-    assign o = a | b;
-endmodule
-
-module fa (input wire i0, i1, cin, output wire sum, cout);
-    wire t0, t1, t2;
-    xor_2 _i0 (i0, i1, t0);
-    xor_2 _i1 (t0, cin, sum);
-    and_2 _i2 (i0, i1, t1);
-    and_2 _i3 (i1, cin, t2);
-    and_2 _i4 (cin, i0, t0);
-    or_2 _i5 (t1, t2, t0);
-    or_2 _i6 (t0, t0, cout);
-endmodule
-
-module addsub (input wire addsub, i0, i1, cin, output wire sumdiff, cout);
-    wire t;
-    fa _i0 (i0, t, cin, sumdiff, cout);
-    xor_2 _i1 (i1, addsub, t);
-endmodule
-
-module alu_slice (input wire [1:0] op, input wire i0, i1, cin, output wire o, cout);
-    wire t_sumdiff, t_and, t_or, t_andor;
-    addsub _i0 (op[0], i0, i1, cin, t_sumdiff, cout);
-    and_2 _i1 (i0, i1, t_and);
-    or_2 _i2 (i0, i1, t_or);
-    mux21 _i3 (t_and, t_or, op[0], t_andor);
-    mux21 _i4 (t_sumdiff, t_andor, op[1], o);
-endmodule
-
-module alu (input wire [1:0] op, input wire [15:0] i0, i1,
-    output wire [15:0] o, output wire cout);
-    wire[14:0] c;
-    alu_slice _i0 (op, i0[0], i1[0], op[0] , o[0], c[0]);
-    alu_slice _i1 (op, i0[1], i1[1], c[0], o[1], c[1]);
-    alu_slice _i2 (op, i0[2], i1[2], c[1], o[2], c[2]);
-    alu_slice _i3 (op, i0[3], i1[3], c[2], o[3], c[3]);
-    alu_slice _i4 (op, i0[4], i1[4], c[3], o[4], c[4]);
-    alu_slice _i5 (op, i0[5], i1[5], c[4], o[5], c[5]);
-    alu_slice _i6 (op, i0[6], i1[6], c[5], o[6], c[6]);
-    alu_slice _i7 (op, i0[7], i1[7], c[6], o[7], c[7]);
-    alu_slice _i8 (op, i0[8], i1[8], c[7], o[8], c[8]);
-    alu_slice _i9 (op, i0[9], i1[9], c[8], o[9], c[9]);
-    alu_slice _i10 (op, i0[10], i1[10], c[9] , o[10], c[10]);
-    alu_slice _i11 (op, i0[11], i1[11], c[10], o[11], c[11]);
-    alu_slice _i12 (op, i0[12], i1[12], c[11], o[12], c[12]);
-    alu_slice _i13 (op, i0[13], i1[13], c[12], o[13], c[13]);
-    alu_slice _i14 (op, i0[14], i1[14], c[13], o[14], c[14]);
-    alu_slice _i15 (op, i0[15], i1[15], c[14], o[15], cout);
-endmodule
-
 module reg16(input wire clk, reset, load, input wire [15:0] din, output wire [15:0] r);
     dfrl d0(clk, reset, load, din[0], r[0]);
     dfrl d1(clk, reset, load, din[1], r[1]);
@@ -117,13 +54,13 @@ endmodule
 
 `timescale 1 ns / 100 ps
 `define TESTVECS 8
-module tb;
+module reg_tb;
   reg clk, reset, wr;
   reg [2:0] rd_addr_a, rd_addr_b, wr_addr; reg [15:0] d_in;
   wire [15:0] d_out_a, d_out_b;
   reg [25:0] test_vecs [0:(`TESTVECS-1)];
   integer i;
-  initial begin $dumpfile("tb_reg_file.vcd"); $dumpvars(0,tb); end
+  initial begin $dumpfile("tb_reg_file.vcd"); $dumpvars(0,reg_tb); end
   initial begin reset = 1'b1; #12.5 reset = 1'b0; end
   initial clk = 1'b0; always #5 clk =~ clk;
   initial begin

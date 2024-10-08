@@ -70,13 +70,13 @@ endmodule
 `timescale 1 ns / 100 ps
 `define TESTVECS 16
 
-module tb;
+module alu_tb;
   reg clk, reset;
   reg [1:0] op; reg [15:0] i0, i1;
   wire [15:0] o; wire cout;
   reg [33:0] test_vecs [0:(`TESTVECS-1)];
   integer i;
-  initial begin $dumpfile("tb_alu.vcd"); $dumpvars(0,tb); end
+  initial begin $dumpfile("tb_alu.vcd"); $dumpvars(0,alu_tb); end
   initial begin reset = 1'b1; #12.5 reset = 1'b0; end
   initial clk = 1'b0; always #5 clk =~ clk;
   initial begin
